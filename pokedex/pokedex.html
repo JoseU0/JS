@@ -1,0 +1,131 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pokedex</title>
+</head>
+
+<body>
+
+    <section id = "pdex" class="p-3">
+        
+        <div class="container-fluid">
+            <img src="assets/img/pokemon_logo.png" class="center" >
+        </div>
+        
+        <div class="wrapper align-items-center">
+                <img class="big-img" src="assets/img/pokedex.png" />
+                <img src="assets/img/pokeball.png" alt="pokeball" id="poke_img" class="small-img center" />
+                <div>
+                    <button type="button" id="up-button" class="vertical_pad-button next"></button>
+                    <button type="button" id="left-button" class="horizontal_pad-button previous"></button>
+                    <button type="button" id="right-button" class="horizontal_pad-button next"></button>
+                    <button type="button" id="down-button" class="vertical_pad-button previous"></button>
+                </div>
+           
+            <div>
+                <input type="text" placeholder="Pokemon Name" id="poke_name" name="poke_name" class="fw-bolder text-dark">
+                <button type="button" onclick="fetch_pokemon()" class="search_button"></button>
+            </div>
+
+            
+            <div class="info">
+                <label class="info_pokemon">
+                    <div class="basic_info text-responsive fw-bolder">
+                        <div class="row">
+                            <div class="col-12">
+                                <p  id="name" ></p>
+                            </div>
+                        </div>
+                        <div class="row mb-0" style="text-align: center;">
+                            <div class="col-6">
+                                <p id="atk" class="fw-bolder"></p>
+                            </div>
+                            <div class="col-6">
+                                <p id="def" class="fw-bolder"></p>
+                            </div>
+                        </div>
+                        <div class="row mt-0" style="text-align: center;">
+                            <div class="col-6">
+                                <p id="hp" class="fw-bolder"></p>
+                            </div>
+                            <div class="col-6">
+                                <p id="speed" class="fw-bolder"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abilities text-responsive fw-bolder" style="display: none;">
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="fw-bolder"">First:</p>
+                            </div>
+                            <div class="col-6">
+                                <p id="first_ability" class="fw-bolder""></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="fw-bolder"">Second:</p>
+                            </div>
+                            <div class="col-6">
+                                <p id="second_ability" class="fw-bolder""></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="fw-bolder"">Hidden:</p>
+                            </div>
+                            <div class="col-6">
+                                <p id="hidden_ability" class="fw-bolder""></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moves text-responsive fw-bolder" style="display: none;">
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="first_move" class="fw-bolder""></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="second_move" class="fw-bolder"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="third_move" class="fw-bolder"></p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <div class="reset_name">
+                    <button type="button" class="reset"></button>
+                    <button type="button" class="reset"></button>
+                </div>
+                <div class="abilities_moves">
+                    <button type="button" id="abilities" class="btn_abilities_moves fw-bolder fs-6">Abilities</button>
+                    <button type="button" id="moves" class="btn_abilities_moves fw-bolder fs-6">Moves</button>
+                </div>
+                <label class="type">
+                    <p id="type" class="fs-6 fw-bolder text-secondary">Type:</p>
+                </label>
+                <label class="type_info">
+                    <p id="type_info" class="fw-bolder"></p>
+                </label>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <script src="./pokedex.js"></script>
+
+</footer>
+
+</html>
